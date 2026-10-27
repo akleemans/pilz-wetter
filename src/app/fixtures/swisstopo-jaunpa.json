@@ -1,0 +1,52 @@
+{
+  "results": [
+    {
+      "attrs": {
+        "label": "<i>Ort</i> <b>Jaunpass</b> (BE) - Boltigen",
+        "origin": "gazetteer",
+        "lat": 46.591957092285156,
+        "lon": 7.338406562805176
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Strassenpass</i> <b>Jaunpass</b> (BE) - Boltigen",
+        "origin": "gazetteer",
+        "lat": 46.59119415283203,
+        "lon": 7.340831756591797
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Standplatzareal</i> <b>Jaunpass</b> (BE) - Boltigen",
+        "origin": "gazetteer",
+        "lat": 46.59259033203125,
+        "lon": 7.337562561035156
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Standplatzareal</i> <b>Jaunpass</b> (BE) - Boltigen",
+        "origin": "gazetteer",
+        "lat": 46.59306335449219,
+        "lon": 7.340085506439209
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Campingplatzareal</i> <b>Jaunpass</b> (BE) - Boltigen",
+        "origin": "gazetteer",
+        "lat": 46.59245300292969,
+        "lon": 7.337329864501953
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Pass</i> <b>Jaunpass</b> (BE) - Boltigen",
+        "origin": "gazetteer",
+        "lat": 46.58903503417969,
+        "lon": 7.333136558532715
+      }
+    }
+  ]
+}

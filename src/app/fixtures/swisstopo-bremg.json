@@ -1,0 +1,124 @@
+{
+  "results": [
+    {
+      "attrs": {
+        "label": "<b>Bremgarten bei Bern (BE)</b>",
+        "origin": "gg25",
+        "lat": 46.97819519042969,
+        "lon": 7.43417501449585
+      }
+    },
+    {
+      "attrs": {
+        "label": "<b>Bremgarten (AG)</b>",
+        "origin": "gg25",
+        "lat": 47.346309661865234,
+        "lon": 8.333881378173828
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Ort</i> <b>Bremgarten AG</b> (AG) - Bremgarten (AG)",
+        "origin": "gazetteer",
+        "lat": 47.35047912597656,
+        "lon": 8.339275360107422
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Ort</i> <b>Bremgarten b. Bern</b> (BE) - Bremgarten bei Bern",
+        "origin": "gazetteer",
+        "lat": 46.977108001708984,
+        "lon": 7.437599182128906
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Ort</i> <b>Bremgarten</b> (SO) - Laupersdorf",
+        "origin": "gazetteer",
+        "lat": 47.33272933959961,
+        "lon": 7.663891315460205
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Ort</i> <b>Bremgarten</b> (LU) - Neuenkirch",
+        "origin": "gazetteer",
+        "lat": 47.07682418823242,
+        "lon": 8.201333045959473
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Ort</i> <b>Fohlenweid</b> (AG) - Bremgarten (AG)",
+        "origin": "gazetteer",
+        "lat": 47.35984802246094,
+        "lon": 8.330934524536133
+      }
+    },
+    {
+      "attrs": {
+        "label": "<b>Bern</b> (BE) - Bremgarten bei Bern,Bern,Muri bei Bern,Köniz,Ostermundigen",
+        "origin": "gazetteer",
+        "lat": 46.948997497558594,
+        "lon": 7.437127590179443
+      }
+    },
+    {
+      "attrs": {
+        "label": "<b>Berna</b> (BE) - Bremgarten bei Bern,Bern,Muri bei Bern,Köniz,Ostermundigen",
+        "origin": "gazetteer",
+        "lat": 46.948997497558594,
+        "lon": 7.437127590179443
+      }
+    },
+    {
+      "attrs": {
+        "label": "<b>Berne</b> (BE) - Bremgarten bei Bern,Bern,Muri bei Bern,Köniz,Ostermundigen",
+        "origin": "gazetteer",
+        "lat": 46.948997497558594,
+        "lon": 7.437127590179443
+      }
+    },
+    {
+      "attrs": {
+        "label": "<b>Bern\n</b> (BE) - Bremgarten bei Bern,Bern,Muri bei Bern,Köniz,Ostermundigen",
+        "origin": "gazetteer",
+        "lat": 46.948997497558594,
+        "lon": 7.437127590179443
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Ort</i> <b>Hermetschwil-Staffeln</b> (AG) - Bremgarten (AG)",
+        "origin": "gazetteer",
+        "lat": 47.33107376098633,
+        "lon": 8.341151237487793
+      }
+    },
+    {
+      "attrs": {
+        "label": "<b>Bremgarten</b> (AG) - Bremgarten (AG)",
+        "origin": "gazetteer",
+        "lat": 47.35206985473633,
+        "lon": 8.344135284423828
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Abwasserreinigungsareal</i> <b>Bremgarten</b> (AG) - Bremgarten (AG)",
+        "origin": "gazetteer",
+        "lat": 47.35618591308594,
+        "lon": 8.344841957092285
+      }
+    },
+    {
+      "attrs": {
+        "label": "<i>Gebaeude</i> <b>Bremgarten Stockweiher 300/200/50/25m</b> (AG) - Bremgarten (AG)",
+        "origin": "gazetteer",
+        "lat": 47.35692596435547,
+        "lon": 8.325368881225586
+      }
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pilzwetter — Prüfszenarien</title>
+    <meta
+      name="description"
+      content="Typische Wetterlagen und wie das Pilzwetter-Modell sie bewertet, zur Prüfung durch erfahrene Pilzsammlerinnen und Pilzsammler."
+    />
+    
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍄</text></svg>"
+    />
+  <link rel="stylesheet" crossorigin href="./assets/index-5sj3xby3.css"><script type="module" crossorigin src="./assets/scenarios-28tfq81y.js"></script><link rel="modulepreload" crossorigin href="./assets/index-njpvnpxm.js"></head>
+  <body>
+    <main class="viz-root">
+      <header class="page-head">
+        <p class="eyebrow"><a href="./">← Pilzwetter</a></p>
+        <h1>Prüfszenarien</h1>
+        <p class="lede">
+          Das Pilzwetter bewertet jeden Tag nach dem Wetter der letzten Wochen. Hier sind
+          <span id="scenario-count">einige</span> typische Wetterlagen, jeweils mit dem Wetter der
+          letzten sechs Wochen, der Bewertung des Modells für den letzten Tag und der Bewertung, die
+          wir erwarten würden. Sie kennen den Wald besser als jedes Modell: stimmt das mit Ihrer
+          Erfahrung überein?
+        </p>
+      </header>
+
+      <section class="card how-to">
+        <h2>So helfen Sie mit</h2>
+        <ol>
+          <li>
+            Lesen Sie die Szenarien, zuerst die <a href="#offen">offenen Fragen</a>. Die Grafik
+            zeigt oben Regen (Balken) und Tagesmitteltemperatur (Linie), unten die Bewertung jedes
+            Tages. Bewertet wird der letzte Tag («heute»).
+          </li>
+          <li>
+            Wählen Sie, wie Sie diesen Tag einschätzen würden, und schreiben Sie dazu, was Sie aus
+            Erfahrung erwarten. Die Antworten bleiben in diesem Browser gespeichert.
+          </li>
+          <li>Kopieren Sie zum Schluss die Rückmeldung und schicken Sie sie uns.</li>
+        </ol>
+        <div class="review-export">
+          <label>
+            <span>Ihr Name (freiwillig)</span>
+            <input id="reviewer" type="text" autocomplete="name" />
+          </label>
+          <button type="button" class="toggle primary" id="copy-review">
+            Rückmeldung kopieren
+          </button>
+          <p class="muted" id="review-status" role="status"></p>
+        </div>
+        <textarea
+          id="review-text"
+          class="review-text"
+          rows="8"
+          readonly
+          hidden
+          aria-label="Rückmeldung"
+        ></textarea>
+        <p class="summary" id="summary"></p>
+      </section>
+
+      <section>
+        <h2 class="section-title" id="offen">Offene Fragen</h2>
+        <p class="section-intro">
+          Bei diesen Szenarien sind wir unsicher: das Modell bewertet sie anders, als wir vermuten.
+          Ihre Erfahrung entscheidet, ob das Modell oder die Erwartung angepasst wird.
+        </p>
+        <div class="scenario-grid" id="open-scenarios"></div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Alle weiteren Szenarien</h2>
+        <div class="scenario-grid" id="all-scenarios"></div>
+      </section>
+
+      <section class="card">
+        <h2>Vergleiche</h2>
+        <p class="section-intro">Manchmal ist die Reihenfolge wichtiger als die genaue Zahl.</p>
+        <ul class="comparisons" id="comparisons"></ul>
+      </section>
+
+      <details class="card params" id="params">
+        <summary>
+          <span>Modellparameter</span>
+          <span class="params-count" data-params-count></span>
+        </summary>
+        <p class="params-intro">
+          Wer ausprobieren möchte, wie sich das Modell verändern liesse: jede Änderung wirkt sofort
+          auf alle Szenarien oben und auf die Prognose. Sie bleibt in diesem Browser gespeichert und
+          wird in der Rückmeldung mitgeschickt.
+        </p>
+        <div data-params-body></div>
+      </details>
+
+      <footer class="page-foot">
+        <a href="./">Zur Prognose</a>. Die Szenarien sind künstlich, damit jeweils nur ein Umstand
+        anders ist. Sie stehen im Code in <code>src/model/scenarios.ts</code>.
+        <br />
+        <span id="page-version"></span>
+      </footer>
+    </main>
+
+    
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pilzwetter Kanton Bern — Prognose fürs Pilzesammeln</title>
+    <meta
+      name="description"
+      content="Zwei Wochen Wetter im Rückblick und drei Tage voraus, bewertet danach, wie vielversprechend der Wald fürs Pilzesammeln aussieht."
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍄</text></svg>"
+    />
+  </head>
+  <body>
+    <main class="viz-root">
+      <header class="page-head">
+        <p class="eyebrow" id="place-meta">Kanton Bern</p>
+        <h1>Pilzwetter</h1>
+        <p class="lede">
+          Zwei Wochen Wetter im Rückblick und drei Tage voraus, jeder Tag bewertet danach, wie
+          vielversprechend der Wald fürs
+          <em>Pilzesammeln</em> aussieht — vor dem Hintergrund von drei Wochen Bodenfeuchte.
+        </p>
+
+        <div class="place-picker" id="place-picker">
+          <label for="place-input">Ort</label>
+          <div class="combobox">
+            <input
+              id="place-input"
+              type="text"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="place-list"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Ort wählen oder eingeben, z. B. Jaunpass"
+            />
+            <button
+              type="button"
+              class="combobox-toggle"
+              tabindex="-1"
+              aria-label="Alle Orte anzeigen"
+            >
+              <svg viewBox="0 0 12 12" aria-hidden="true">
+                <path
+                  d="M2.5 4.5 6 8l3.5-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </button>
+            <ul id="place-list" role="listbox" aria-label="Orte" hidden></ul>
+          </div>
+          <p class="place-hint">
+            Aus der Liste wählen oder einen beliebigen Ort in der Schweiz eintippen. Die Wetterdaten
+            kommen von Open-Meteo für die Koordinaten des Ortes.
+          </p>
+        </div>
+      </header>
+
+      <section class="today" id="today" aria-live="polite">
+        <p class="today-loading">Wetterdaten werden geladen…</p>
+      </section>
+
+      <section class="card chart-card">
+        <div class="chart-head">
+          <h2>Die letzten 14 Tage und die nächsten 3</h2>
+          <p class="chart-sub">
+            Mit dem Zeiger über einen Tag fahren für die Zahlen und die Begründung der Bewertung.
+          </p>
+        </div>
+        <div id="chart" class="chart" role="img" aria-label=""></div>
+        <div class="scale" id="scale"></div>
+      </section>
+
+      <section class="card table-card">
+        <button class="toggle" id="table-toggle" aria-expanded="false" aria-controls="table-wrap">
+          Zahlen als Tabelle anzeigen
+        </button>
+        <div class="table-wrap" id="table-wrap" hidden></div>
+      </section>
+
+      <section class="card explainer">
+        <h2>Wie die Bewertung zustande kommt</h2>
+        <p>
+          Jeder Tag erhält 0–100 Punkte aus einem kleinen Wasserhaushaltsmodell. Regen muss erst
+          einmal <em>in</em> den Boden hinein: von einem Wolkenbruch mit 40 mm läuft das meiste
+          oberflächlich ab — deshalb sind mehrere mässige Regentage mehr wert als dieselbe Menge in
+          drei Güssen. Was einsickert, wird als Bodenwasserspeicher weitergeführt, der bei Hitze
+          schneller verdunstet. Drei Dinge müssen gleichzeitig zusammenkommen, keines kann ein
+          anderes ersetzen:
+        </p>
+        <dl class="factors">
+          <div>
+            <dt>Bodenfeuchte</dt>
+            <dd>
+              Ist der Boden <em>heute</em> feucht — und nicht so nass, dass er sauer geworden ist?
+            </dd>
+          </div>
+          <div>
+            <dt>Anhaltende Feuchte</dt>
+            <dd>
+              War es über Wochen feucht, damit das Myzel überhaupt Kraft aufbauen konnte, bevor es
+              fruchtet?
+            </dd>
+          </div>
+          <div>
+            <dt>Auslösender Regen</dt>
+            <dd>
+              Ein durchdringender Regen vor 3–10 Tagen. Der Regen von gestern zählt kaum — der Schub
+              braucht Tage, bis er durchkommt.
+            </dd>
+          </div>
+        </dl>
+        <p>
+          Die Temperatur wirkt anschliessend als Schranke (Fruchtkörper bilden sich ungefähr
+          zwischen 10 und 25 °C, am besten bei 12–18 °C Tagesmittel), Frost und Hitze drücken das
+          Ergebnis, und ein Saisonfaktor hält einen warmen, nassen Januar ehrlich. In höheren Lagen
+          beginnt die Saison später und endet früher. Wie das Modell auf typische Wetterlagen
+          reagiert, zeigen die
+          <a href="./scenarios">Prüfszenarien</a>.
+        </p>
+        <p class="caveat">
+          Eine Wetterbewertung ist kein Pilzdetektor: sie sagt nichts darüber, welche Arten stehen,
+          ob der Standort passt oder wer vor Ihnen dort war. Sie ist zudem aufs Mittelland
+          zugeschnitten — in den Bergen ist sie bestenfalls ein grober Anhaltspunkt.
+          <strong
+            >Essen Sie nie einen Pilz aufgrund einer Prognose — nur aufgrund einer
+            Bestimmung.</strong
+          >
+          Im Zweifel bringen Sie ihn zu einer Pilzkontrollstelle der
+          <a href="https://www.vapko.ch/" rel="noopener">VAPKO</a>.
+        </p>
+      </section>
+
+      <details class="card params" id="params">
+        <summary>
+          <span>Modellparameter</span>
+          <span class="params-count" data-params-count></span>
+        </summary>
+        <p class="params-intro">
+          Alle Stellschrauben des Modells. Änderungen wirken sofort auf die Prognose und die
+          <a href="./scenarios">Prüfszenarien</a> und bleiben in diesem Browser gespeichert. Die
+          ausführliche Beschreibung steht in <code>MODEL.md</code>.
+        </p>
+        <div data-params-body></div>
+      </details>
+
+      <footer class="page-foot">
+        Wetterdaten von
+        <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a>
+        (CC BY 4.0), Ortssuche von
+        <a href="https://www.geo.admin.ch/" rel="noopener">swisstopo</a>, beides live im Browser
+        geladen. <a href="./scenarios">Prüfszenarien</a>.
+        <span id="updated"></span>
+        <br />
+        <span id="page-version"></span>
+      </footer>
+    </main>
+
+    <script type="module" src="./src/pages/forecast.ts"></script>
+  </body>
+</html>

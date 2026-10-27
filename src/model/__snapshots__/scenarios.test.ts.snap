@@ -1,0 +1,32 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`scenario scores (snapshot) 1`] = `
+{
+  "baseline-damp": 45,
+  "burst-rain": 74,
+  "decent-autumn": 79,
+  "drought-broken-recently": 86,
+  "drought-broken-two-weeks-ago": 19,
+  "drought-broken-week-ago": 84,
+  "drought-warm": 0,
+  "dry-spell-after-wet": 6,
+  "drying-out": 0,
+  "first-rain-after-drought": 10,
+  "frost": 6,
+  "ideal-autumn": 100,
+  "november-mild": 21,
+  "october-alpine": 87,
+  "october-lowland": 99,
+  "rain-eighteen-days-ago": 51,
+  "rain-six-days-ago": 95,
+  "rain-yesterday": 56,
+  "snow-then-thaw": 95,
+  "spread-rain": 100,
+  "spring-may": 47,
+  "summer-thunderstorms": 58,
+  "waterlogged": 49,
+  "wet-cold": 13,
+  "wet-hot": 5,
+  "winter-ideal": 12,
+}
+`;
